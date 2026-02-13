@@ -7,6 +7,15 @@
 
 > Validate .env files against .env.example or a JSON schema. CLI + library. Zero dependencies.
 
+<p align="center">
+  <img src="assets/demo.gif" alt="env-guard demo" width="600" />
+</p>
+
+
+<p align="center">
+  <img src="assets/demo.gif" alt="env-guard demo" width="600" />
+</p>
+
 Never hear "it doesn't work because I'm missing env vars" again.
 
 ## Quick Start
