@@ -107,7 +107,16 @@ export function validateAgainstSchema(
 
     if (typeof rule === "object") {
       if (rule.pattern) {
-        const regex = new RegExp(rule.pattern);
+        let regex: RegExp;
+        try {
+          regex = new RegExp(rule.pattern);
+        } catch {
+          errors.push({
+            key,
+            message: `Invalid pattern "${rule.pattern}"`,
+          });
+          continue;
+        }
         if (!regex.test(value)) {
           errors.push({
             key,
@@ -168,7 +177,19 @@ export function envGuard(options: EnvGuardOptions = {}): ValidationResult {
         errors: [{ key: "", message: `Cannot read schema ${schemaPath}` }],
       };
     }
-    const schema = JSON.parse(schemaContent) as EnvSchema;
+    let schema: EnvSchema;
+    try {
+      schema = JSON.parse(schemaContent) as EnvSchema;
+    } catch {
+      return {
+        valid: false,
+        missing: [],
+        extra: [],
+        errors: [
+          { key: "", message: `Cannot parse schema as JSON: ${schemaPath}` },
+        ],
+      };
+    }
     return validateAgainstSchema(envVars, schema);
   }
 
