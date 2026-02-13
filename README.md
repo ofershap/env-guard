@@ -1,15 +1,24 @@
 # env-guard
 
 [![npm version](https://img.shields.io/npm/v/env-guard.svg)](https://www.npmjs.com/package/env-guard)
+[![npm downloads](https://img.shields.io/npm/dm/env-guard.svg)](https://www.npmjs.com/package/env-guard)
 [![CI](https://github.com/ofershap/env-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/env-guard/actions/workflows/ci.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://github.com/ofershap/env-guard)
 
-> Validate .env files against .env.example or a JSON schema. CLI + library. Zero dependencies.
+Stop deploying with missing env vars. One command catches them before your app does.
+
+```bash
+$ npx env-guard
+✗ Environment validation failed:
+  • DATABASE_URL: Missing variable
+  • API_KEY: Missing variable
+```
+
+> Validate `.env` files against `.env.example` or a JSON schema. CLI + library. Zero dependencies.
 
 ![Demo](assets/demo.gif)
-
-Never hear "it doesn't work because I'm missing env vars" again.
 
 ## Quick Start
 
@@ -149,12 +158,3 @@ Parse a .env file string into a Map. Handles comments, quotes, empty lines.
 
 [MIT](LICENSE) &copy; [Ofer Shapira](https://github.com/ofershap)
 
----
-
-### Other projects by [@ofershap](https://github.com/ofershap)
-
-- [`ts-nano-event`](https://github.com/ofershap/ts-nano-event) — Typed event emitter in ~200 bytes
-- [`use-stepper`](https://github.com/ofershap/use-stepper) — React hook for multi-step forms and wizards
-- [`hebrew-slugify`](https://github.com/ofershap/hebrew-slugify) — Slugify Hebrew text for URLs
-- [`ai-commit-msg`](https://github.com/ofershap/ai-commit-msg) — GitHub Action for AI commit messages
-- [`awesome-hebrew-dev`](https://github.com/ofershap/awesome-hebrew-dev) — Curated list of Hebrew developer resources
