@@ -1,4 +1,4 @@
-# env-guard
+# env-guard — Validate Environment Variables Before Deploy
 
 [![npm version](https://img.shields.io/npm/v/env-guard.svg)](https://www.npmjs.com/package/env-guard)
 [![npm downloads](https://img.shields.io/npm/dm/env-guard.svg)](https://www.npmjs.com/package/env-guard)
@@ -7,7 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](https://github.com/ofershap/env-guard)
 
-Stop deploying with missing env vars. One command catches them before your app does.
+Stop deploying with missing env vars. A zero-dependency CLI and library that validates `.env` files against `.env.example` or a JSON schema — one command catches them before your app does.
 
 ```bash
 $ npx env-guard
@@ -18,7 +18,7 @@ $ npx env-guard
 
 > Validate `.env` files against `.env.example` or a JSON schema. CLI + library. Zero dependencies.
 
-![Demo](assets/demo.gif)
+![env-guard CLI demo — validating .env against .env.example and catching missing variables](assets/demo.gif)
 
 ## Quick Start
 
