@@ -1,6 +1,6 @@
 {
   "name": "ts-env-guard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate .env files against .env.example or a JSON schema",
   "type": "module",
   "exports": {
